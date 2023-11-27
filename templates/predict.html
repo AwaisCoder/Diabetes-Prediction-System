@@ -1,0 +1,136 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predcition Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        body{
+        background-image: url("{% static 'MyProject2\images\diabetesbgimg.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        }
+
+        .main{
+            position: fixed;
+            top: 115px;
+            left: 410px;
+            width: 540px;
+            background-color: lightskyblue;
+            border-radius: 30px;
+            align-items: center;
+            padding: 2.6%;
+        }
+
+         input[type=submit] {
+             background-color: dodgerblue;
+             color: #050298;
+             border: 2px;
+             padding: 10px 20px;
+             cursor: pointer;
+             margin-top: 20px;
+             margin-bottom: 15px;
+             font-size: 15px;
+             font-family: 'Poppins', sans-serif;
+             font-weight: 500;
+         }
+
+        html, body {
+        height: 100%;
+        margin: 0;
+        }
+
+        h1 {
+        font-size: 55px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 700;
+        color: #050298;
+        }
+
+        h6 {
+        font-size: 27px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 700;
+        color: #0603b8;
+        }
+
+        table {
+            align-items: center;
+            top: 100px;
+            color: #0603b8;
+            font-family: Poppins, sans-serif;
+            font-weight: 500;
+            font-size: 14.5px;
+
+        }
+        td {
+            text-align: left;
+            padding: 3px;
+        }
+        input[type=text]{
+            text-align: left;
+        }
+
+        p {
+            color: #0603b8;
+            font-family: Poppins, sans-serif;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+<h1 align ="center"> Diabetes Prediction Calculator </h1>
+<div align="center" class="main">
+    <h6> Please enter the following information: </h6>
+    <form action="result">
+        <table align="center">
+            <tr>
+                <td>Pregnancies :</td>
+                <td align="right"> <input type="text" name="n1" placeholder="Pregnancies"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Glucose :</td>
+                <td align="right"> <input type="text" name="n2" placeholder="Glucose"></td>
+            </tr>
+
+            <tr>
+                <td align="right">BMI :</td>
+                <td align="right"> <input type="text" name="n3" placeholder="BMI"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Insulin :</td>
+                <td align="right"> <input type="text" name="n4" placeholder="Insulin"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Age :</td>
+                <td align="right"> <input type="text" name="n5" placeholder="Age"></td>
+            </tr>
+
+            <tr>
+                <td align="right">BP :</td>
+                <td align="right"> <input type="text" name="n6" placeholder="BloodPressure"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Skin TK :</td>
+                <td align="right"> <input type="text" name="n7" placeholder="SkinThickness"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Diabetes PF :</td>
+                <td align="right"> <input type="text" name="n8" placeholder="DiabetesPedigreeFunction"></td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Predict">
+    </form>
+    <p>Result:{{result2}}</p>
+</div>
+</body>
+</html>

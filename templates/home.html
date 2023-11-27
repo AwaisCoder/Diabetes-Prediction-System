@@ -1,0 +1,90 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Montserrat|Lato&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+
+        input[type=submit]{
+            background-color: lightskyblue;
+            color: #050298;
+            border: 2px;
+            padding: 16px 32px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 20px;
+            font-family: 'Poppins',sans-serif;
+            font-weight: 500;
+
+
+        }
+
+        body {
+        background-image: url("{% static 'MyProject2\images\diabetesbgimg.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+        html, body {
+        height: 100%;
+        margin: 0;
+        }
+
+        h1 {
+        font-size: 58px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 700;
+        background: linear-gradient(90deg, midnightblue, darkblue,blueviolet, mediumblue);
+        background-size: 300% 100%;
+        animation: colorChange 15s linear infinite;
+        color: transparent; /* Hide the actual text color */
+        background-clip: text; /* Clip the gradient to the text only */
+        -webkit-background-clip: text; /* For Safari */
+         text-decoration: underline;
+        }
+
+        h6 {
+        font-size: 32px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 500;
+        color: #0603b8;
+        }
+
+        @keyframes colorChange {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    75% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+    </style>
+</head>
+<body>
+<h1 align ="center"> Diabetes Prediction Using Machine Learning </h1>
+<h6 align="center"> Diabetes is a chronic medical condition characterized by the body's inability to regulate <br> blood sugar (glucose) effectively.
+    Type 1 diabetes is an autoimmune disorder where the <br> immune system attacks the insulin-producing cells in the pancreas.
+    Type 2 diabetes<br> occurs when the body becomes resistant to insulin or doesn't produce enough insulin.<br> Common symptoms of diabetes
+    include increased thirst, frequent urination,<br> unexplained weight loss, fatigue, and blurred vision.</h6>
+
+<div align="center">
+    <form action="predict">
+        <input type="submit" value="Let's Get Started!!">
+    </form>
+</div>
+</body>
+</html>
